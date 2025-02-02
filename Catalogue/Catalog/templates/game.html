@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+    <br>
+    <div class="text-center">
+        <img class="rounded" src={{game.cover.url}} width=300 height=300 alt={{game.title}}_Image></img>
+        <h3> {{game.title}} </h3>
+        <h5> Developers: {{game.developers}} </h5>
+        <h6>Release Date: {{game.release_date}}</h6>
+        <p>{{game.description}}</p>
+    </div>
+
+    <div class="container center">
+        <div class="row justify-content-md-center">
+            {% for rank in ranks %}
+                <div class='col-1'>
+                    <a href='{{game.id}}/{{rank}}'>
+                    <img src='/static/Catalog/Ranks/Rank_{{rank}}.png' width=75 height=75 alt={{rank}}></img>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

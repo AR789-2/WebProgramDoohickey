@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <br>
+    <div class="list-grid-container">
+        {% for game in Games %}
+        <figure>
+            <a href={% url 'game' game.id %}>
+                <img class="rounded" src={{game.cover.url}} width=300 height=300 alt={{game.title}}_Image></img>
+            </a>
+            <figcaption> {{game.title}} </figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+{% endblock %}

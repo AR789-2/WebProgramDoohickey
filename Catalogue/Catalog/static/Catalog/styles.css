@@ -1,0 +1,16 @@
+#center {
+  align-items: center;
+}
+
+.list-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  text-align: center;
+}
+
+.ranks.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+}

@@ -16,7 +16,11 @@
             {% for rank in ranks %}
                 <div class='col-1'>
                     <a href='{{game.id}}/{{rank}}'>
-                    <img src='/static/Catalog/Ranks/Rank_{{rank}}.png' width=75 height=75 alt={{rank}}></img>
+                    {% if cur_rank == rank %}
+                        <img src='/static/Catalog/Ranks/Rank_{{rank}}.png' class="select" width=75 height=75 alt={{rank}}></img>
+                    {% else %}
+                        <img src='/static/Catalog/Ranks/Rank_{{rank}}.png' width=75 height=75 alt={{rank}}></img>
+                    {% endif %}
                     </a>
                 </div>
             {% endfor %}

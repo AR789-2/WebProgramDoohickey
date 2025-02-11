@@ -14,3 +14,15 @@
   grid-template-columns: auto auto auto auto auto auto;
   align-items: center;
 }
+
+.select {
+  border: 5px solid yellow;
+}
+
+.darkened-image {
+  filter: brightness(70%);
+}
+
+.whiten {
+  color: white;
+}

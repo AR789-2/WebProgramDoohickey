@@ -9,14 +9,26 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="GAME 1">
+        <img src={{No_1.cover.url}} width=300 height=400 class="d-block w-100 darkened-image" alt={{No_1.title}}>
+        <div class="carousel-caption d-none d-md-block">
+          <a href={% url 'game' No_1.id %} class="whiten">
+            <h1>Rank #1</h1>
+            <h5>{{No_1.title}}</h5>
+            <p>{{No_1.developers}}</p>
+          </a>
+        </div>
       </div>
+      {% for game in Run_2 %}
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="GAME 2">
+        <img src={{game.cover.url}} width=300 height=400 class="d-block w-100 darkened-image" alt={{game.title}}>
+        <div class="carousel-caption d-none d-md-block">
+          <a href={% url 'game' game.id %} class="whiten">
+            <h5>{{game.title}}</h5>
+            <p>{{game.developers}}</p>
+          </a>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="GAME 3">
-      </div>
+      {%endfor%}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -27,6 +39,8 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
-    <h2>Welcome to the Game Codex</h2>
+  <br>
+  <h1>The Game Codex</h1>
+  <h2>What is it?</h2>
+  <p>The Game Codex is a website where users can anonymously vote their opinions on various video games, that's just about it.
 {% endblock %}

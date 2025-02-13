@@ -12,8 +12,8 @@
         <img src={{No_1.cover.url}} width=300 height=400 class="d-block w-100 darkened-image" alt={{No_1.title}}>
         <div class="carousel-caption d-none d-md-block">
           <a href={% url 'game' No_1.id %} class="whiten">
-            <h1>Rank #1</h1>
-            <h5>{{No_1.title}}</h5>
+            <h1>Ranked #1</h1>
+            <h5><b>{{No_1.title}}</b></h5>
             <p>{{No_1.developers}}</p>
           </a>
         </div>
@@ -23,7 +23,7 @@
         <img src={{game.cover.url}} width=300 height=400 class="d-block w-100 darkened-image" alt={{game.title}}>
         <div class="carousel-caption d-none d-md-block">
           <a href={% url 'game' game.id %} class="whiten">
-            <h5>{{game.title}}</h5>
+            <h5><b>{{game.title}}</b></h5>
             <p>{{game.developers}}</p>
           </a>
         </div>
@@ -40,7 +40,8 @@
     </button>
   </div>
   <br>
-  <h1>The Game Codex</h1>
-  <h2>What is it?</h2>
-  <p>The Game Codex is a website where users can anonymously vote their opinions on various video games, that's just about it.
+  <div class="text-center">
+    <h1><b>The Game Codex</b></h1>
+    <p>The Game Codex is a website where users can anonymously vote their opinions on various video games.<br>Rank them low, rank them high, your opinions matter!</p>
+  </div>
 {% endblock %}
